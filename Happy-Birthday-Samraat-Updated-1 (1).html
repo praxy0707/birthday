@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Samraat</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#0f172a,#1e3a8a);overflow:hidden;color:#fff}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:.8s}
+.hidden{opacity:0;pointer-events:none;transform:scale(.95)}
+button{padding:14px 28px;border:none;border-radius:30px;background:#ff4f8f;color:#fff;font-size:18px;cursor:pointer}
+.heart{position:absolute;bottom:-30px;animation:up 7s linear infinite}.cake div{margin:auto;background:#ff9cbc;border-radius:8px}.l1{width:180px;height:45px}.l2{width:140px;height:40px}.l3{width:100px;height:35px}.c{width:8px;height:35px;background:#fff}.f{width:18px;height:18px;background:gold;border-radius:50%;margin:-9px auto 0;animation:f .6s infinite alternate}
+@keyframes up{to{transform:translateY(-120vh);opacity:0}}
+@keyframes f{to{transform:scale(1.2)}}
+.walk{font-size:80px;animation:walk 3s infinite alternate}
+@keyframes walk{from{transform:translateX(-90px)}to{transform:translateX(90px)}}#fn{background:linear-gradient(135deg,#1b1035,#ff4f8f,#ff7eb3);background-size:400% 400%;animation:bgMove 10s ease infinite}@keyframes bgMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+</style></head><body>
+<div id=w class="screen">
+<h1>Happy Birthday Samraat 🩷</h1><p>Welcome to your little surprise!</p>
+<div class=cake><div class=f></div><div class=c></div><div class=l3></div><div class=l2></div><div class=l1></div></div>
+<button onclick="s1()">Enter ❤️</button></div>
+<div id=g class="screen hidden">
+<div class=walk>👧➡️❤️➡️👦</div>
+<h2>A girl walking to give her heart...</h2>
+<button onclick="s2()">Click for Surprise 🎁</button></div>
+<div id=fn class="screen hidden">
+<h1>🎉 Happy Birthday Samraat ❤️🎉</h1>
+<h2>You make every day brighter.</h2>
+<p style="max-width:700px;font-size:22px;line-height:1.8;color:#ffe4ef;padding:20px;margin-top:15px;background:rgba(255,255,255,.12);border-radius:20px;backdrop-filter:blur(10px);box-shadow:0 0 20px rgba(255,255,255,.15)">
+My dearest Samraat,<br><br>
+I love you so much, my baby. ❤️<br><br>
+Thank you for being the most beautiful part of my life. Every smile, every laugh, and every moment with you is a memory I'll cherish forever. You make my world brighter just by being in it.<br><br>
+On your birthday, I wish you endless happiness, success, good health, and all the love your heart can hold. Happy Birthday once again, my love. ❤️<br><br>
+Forever yours,<br><b>Prajakta 🩷</b>
+</p>
+</div>
+<script>
+function s1(){w.classList.add('hidden');g.classList.remove('hidden')}
+function s2(){g.classList.add('hidden');fn.classList.remove('hidden')}
+setInterval(()=>{let h=document.createElement('div');h.className='heart';h.textContent=Math.random()>.5?'🩷':'💙';h.style.left=Math.random()*100+'vw';h.style.fontSize=(20+Math.random()*20)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),7000)},250)
+</script></body></html>
